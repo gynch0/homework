@@ -1,0 +1,43 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+}
+fieldset {
+	width: 400px;
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding: 30px 0 30px 40px;
+	margin: 0 auto;
+}
+h1 {
+	font-weight: 700;
+	font-size: 20px;
+}
+label {
+	display: block;
+	margin: 5px 0 5px;
+	font-size: 18px;
+}
+input {
+	border-radius: 5px;
+	padding: 3px 5px;
+	color: #000;
+}
+input::placeholder {
+	font-size: 10px;
+}
+textarea {
+	border-radius: 5px;
+	width: 306px;
+	resize: vertical;
+	max-height: 200px;
+}
+.width {
+	width: 300px;
+}
+button {
+	border-radius: 5px;
+	border-color: aquamarine;
+	cursor: pointer;
+}
