@@ -4,10 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>form</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
-		<form action="">
+		<form class="form" action="">
 			<fieldset>
 				<h1>Ваши личные данные</h1>
 				<label for="">Ваше имя </label>
@@ -22,16 +23,17 @@
 					required
 				/>
 				<label for="">Ваш номер телефона </label>
-				<input type="tel" class="width" required placeholder="номер телефона" />
+				<input type="tel" class="width" required placeholder="Номер телефона" />
 				<label for="">Ваш почта </label>
-				<input type="email " class="width" placeholder="почта" required />
+				<input type="email " class="width" placeholder="Почта" required />
 
 				<label for=""> Сообщение </label>
 				<textarea name="" id="" placeholder="Ваше сообщение"></textarea>
-				<label class="checkbox" for="">
-					<input type="checkbox" required /> Я принимаю правила
+				<label class="checkbox-label" for="checkbox">
+					<input class="checkbox" type="checkbox" required />
+					<span>Я принимаю правила</span>
 				</label>
-				<button>Отправить</button>
+				<button class="button">Отправить</button>
 			</fieldset>
 		</form>
 	</body>
