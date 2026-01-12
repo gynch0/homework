@@ -8,12 +8,7 @@
 	gap: 10px;
 }
 .phone {
-	font-weight: 300;
-	font-size: 14px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
 	text-align: right;
-	color: #858e8a;
 }
 .phone p {
 	padding-bottom: 8px;
