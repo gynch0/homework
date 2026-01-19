@@ -2,6 +2,8 @@
 	font-family: var(--font-family);
 	font-weight: 400;
 	color: var(--main-color);
+	scroll-behavior: smooth;
+	scroll-padding: 98px;
 }
 
 .page__body {
@@ -15,6 +17,9 @@
 	width: min(var(--container-width), 100% - var(--container-padding) * 2);
 	margin-inline: auto;
 }
+img {
+	object-fit: cover;
+}
 
 a:focus-visible,
 button:focus-visible {
@@ -24,3 +29,23 @@ button:focus-visible {
 /* .main {
 	padding-top: 60px;
 } */
+
+.text-regular,
+.text-light {
+	font-size: 16px;
+	line-height: 140%;
+	color: var(--main-color);
+}
+.text-light {
+	font-weight: 300;
+}
+.text-regular {
+	font-weight: 400;
+}
+.title-md {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
+	text-transform: uppercase;
+	color: var(--main-color);
+}
