@@ -4,11 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/index.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+		/>
 		<link
 			rel="shortcut icon"
 			href="./icons/nike-favicon.svg"
 			type="image/x-icon"
 		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+			defer
+		></script>
+
 		<script src="./js/index.js" type="module"></script>
 		<title>Nike Air Mag</title>
 	</head>
@@ -158,6 +168,85 @@
 								и комфорта
 							</li>
 						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="sizes" class="sizes section">
+				<div class="container">
+					<h2 class="sizes__title title-md section-title">Размеры</h2>
+
+					<div class="sizes__slider-wrapper">
+						<button
+							class="sizes__slider-button sizes__slider-button--prev"
+							aria-label="Предыдущий слайд"
+						>
+							<svg width="40" height="40">
+								<use
+									class="sizes__slider-button-icon"
+									href="./icons/main.sprite.svg#double-arrow"
+								></use>
+							</svg>
+						</button>
+						<div class="swiper sizes__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sizes__slide-inner">
+										<picture>
+											<source
+												srcset="./images/sizes-slider/nike-air-mag-slide-1.webp"
+											/>
+											<img
+												src="./images/sizes-slider/nike-air-mag-slide-1.png"
+												width="357"
+												height="375"
+												alt="Кроссовки фирмы Air mag ,повернутые носом в право ,вид спереди"
+											/>
+										</picture>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sizes__slide-inner">
+										<picture>
+											<source
+												srcset="./images/sizes-slider/nike-air-mag-slide-2.webp"
+											/>
+											<img
+												src="./images/sizes-slider/nike-air-mag-slide-2.png"
+												width="408"
+												height="375"
+												alt="Кроссовки фирмы Air mag ,повернутые пяткой к лицу ,вид сзади "
+											/>
+										</picture>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sizes__slide-inner">
+										<picture>
+											<source
+												srcset="./images/sizes-slider/nike-air-mag-slide-3.webp"
+											/>
+											<img
+												src="./images/sizes-slider/nike-air-mag-slide-3.png"
+												width="442"
+												height="375"
+												alt="Кроссовки фирмы Air mag ,повёрнутые налево "
+											/>
+										</picture>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button
+							class="sizes__slider-button sizes__slider-button--next"
+							aria-label="Следующий слайд"
+						>
+							<svg width="40" height="40">
+								<use
+									class="sizes__slider-button-icon"
+									href="./icons/main.sprite.svg#double-arrow"
+								></use>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</section>
