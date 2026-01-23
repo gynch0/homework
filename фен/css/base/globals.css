@@ -1,0 +1,13 @@
+.html__page {
+	font-family: var(--font-family);
+	font-weight: 400;
+
+	color: var(--main-color);
+}
+.body__page {
+	min-width: 320px;
+}
+.container {
+	width: min(var(--container-width), 100% - var(--container-padding) * 2);
+	margin-inline: auto;
+}
