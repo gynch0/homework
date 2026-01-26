@@ -11,3 +11,16 @@
 	width: min(var(--container-width), 100% - var(--container-padding) * 2);
 	margin-inline: auto;
 }
+.title {
+	font-family: var(--second-family);
+	font-weight: 900;
+}
+.text {
+	font-family: var(--font-family);
+	font-weight: 400;
+}
+.button {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 24px;
+}
