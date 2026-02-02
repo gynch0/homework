@@ -35,6 +35,7 @@
 .special-offer__popular {
 	position: absolute;
 	right: 0;
+	transform: translate(-15px);
 	display: flex;
 	align-items: center;
 	justify-content: center;

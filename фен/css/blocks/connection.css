@@ -1,5 +1,5 @@
 .connection {
-	padding-bottom: 114px;
+	padding-bottom: clamp(45px, 3.762rem + 2.8vw, 111px);
 	background: var(--third-background);
 }
 .connection__wrapper {
@@ -60,6 +60,12 @@
 	background-color: var(--main-color);
 	padding: clamp(10px, 0.555rem + 0.32vw, 15px)
 		clamp(30px, 1.708rem + 0.76vw, 42px);
+	transition: background-color var(--transition-time);
+}
+@media (any-hover: hover) {
+	.connection__wrapper-info-left-btn:hover {
+		background-color: var(--fourth-background);
+	}
 }
 .connection__wrapper-info-right-btn {
 	max-width: 244px;

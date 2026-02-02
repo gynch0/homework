@@ -5,10 +5,13 @@
 	color: var(--main-color);
 }
 .body__page {
-	/* min-width: 320px; */
+	min-width: 320px;
 }
 .container {
 	width: min(var(--container-width), 100% - var(--container-padding) * 2);
+	overflow: hidden;
+	padding-inline: 15px;
+
 	margin-inline: auto;
 }
 .title {
@@ -49,4 +52,14 @@
 	width: 24px;
 	height: 23px;
 	display: inline-block;
+	fill: currentColor;
+}
+@media (any-hover: hover) {
+	.button-repetitive:hover {
+		border: 1px solid var(--fourth-background);
+		color: var(--fourth-background);
+	}
+	.button-repetitive:hover::after {
+		fill: #c5358c;
+	}
 }

@@ -80,7 +80,7 @@
 		flex-direction: column;
 	}
 	.reviews__stars-button {
-		width: 150px;
+		min-width: 150px;
 		font-size: 11px;
 	}
 	.reviews__stars-2 {
@@ -90,6 +90,13 @@
 	.reviews__scores-info img {
 		width: 80px;
 		height: 80px;
+	}
+	.star-svg {
+		width: 15px;
+		height: 15px;
+	}
+	.reviews__stars-icon {
+		min-width: 160px;
 	}
 }
 .button-flex {
