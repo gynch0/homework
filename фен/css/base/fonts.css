@@ -23,7 +23,7 @@
 	src:
 		local("OpenSans Medium"),
 		local("OpenSans-Medium"),
-		url("../../fonts/OpenSans-Medium.woff") format("woff2");
+		url("../../fonts/OpenSans-Medium.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -52,8 +52,8 @@
 @font-face {
 	font-family: NAMU;
 	src:
-		local("NAMU Black "),
-		local("NAMU-Black "),
+		local("NAMU Black"),
+		local("NAMU-Black"),
 		url("../../fonts/NAMU-pro.woff2") format("woff2");
 	font-weight: 900;
 	font-style: normal;
