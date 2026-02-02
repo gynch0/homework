@@ -28,6 +28,16 @@
 	border: 1px solid #111;
 	border-radius: 3px;
 	padding: 10px 20px;
+	transition:
+		background var(--transition-time),
+		color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.reviews__stars-button:hover {
+		background: #ababab;
+		color: var(--third-background);
+	}
 }
 .reviews__stars-icon {
 	min-width: 213px;

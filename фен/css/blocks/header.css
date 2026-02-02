@@ -19,6 +19,15 @@
 	font-weight: 900;
 	font-size: 20px;
 }
+.header__menu-item {
+	transform: color var(--transition-time);
+}
+@media (any-hover: hover) {
+	.header__menu-item:hover {
+		color: #ababab;
+	}
+}
+
 .header__actions-content {
 	display: flex;
 	gap: 20px;

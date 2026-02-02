@@ -23,6 +23,13 @@
 	padding: 16px 51px;
 	color: var(--secondary-color);
 	background-color: #c5358c;
+	transition: transform var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.technologies__button:hover {
+		transform: scale(1.05);
+	}
 }
 @media (width <=1240px) {
 	.technologies__title {
