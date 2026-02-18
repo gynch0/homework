@@ -25,7 +25,6 @@ const createTodo = (todos, text) => {
 
 const completeTodoById = (todos, todoId) => {
 	const todo = todos.find(todo => todo[todoKeys.id] === todoId);
-
 	if (!todo) {
 		console.error(errTodoNotFound(todoId));
 		return null;
@@ -44,48 +43,53 @@ const deleteTodoById = (todos, todoId) => {
 	return todos;
 };
 
-// При помощи метода querySelector получаем элементы .form, .input и .todos
-// Создаем функцию createTodoElement(text), которая будет создавать todo в виде разметки
-// Создаем функцию handleCreateTodo(todos, text), которая будет вызывать createTodo и createTodoElement
+const formElement = document.querySelector(".form");
+const inputElement = document.querySelector(".input");
+const todosElement = document.querySelector(".todos");
 
-const form = document.querySelector(".form");
-const input = document.querySelector(".input");
-const todosList = document.querySelector(".todos");
-
-const todoElement = function TodoElement(text) {
-	const li = document.createElement("li");
-	li.classList.add("todo");
-
-	const textDiv = document.createElement("div");
-	textDiv.classList.add("todo-text");
-	textDiv.textContent = text;
-
-	const actions = document.createElement("div");
-	actions.classList.add("todo-actions");
-
-	const completeBtn = document.createElement("button");
-	completeBtn.classList.add("button", "button-complete");
-	completeBtn.textContent = "✔";
-
-	const deleteBtn = document.createElement("button");
-	deleteBtn.classList.add("button", "button-delete");
-	deleteBtn.textContent = "✖";
-
-	actions.append(completeBtn, deleteBtn);
-	li.append(textDiv, actions);
-
-	return li;
+const createTodoElement = todo => {
+	const todoElement = document.createElement("li");
+	todoElement.classList.add("todo");
+	todoElement.dataset.id = todo[todoKeys.id];
+	todoElement.innerHTML = `
+	<div class="todo-text">${todo[todoKeys.text]}</div>
+  <div class="todo-actions">
+		<button class="button-complete button">&#10004;</button>
+		<button class="button-delete button">&#10006;</button>
+	</div>
+	`;
+	return todoElement;
 };
 
 const handleCreateTodo = (todos, text) => {
 	const todo = createTodo(todos, text);
-	const element = todoElement(todo.text);
-	todosList.append(element);
+	const todoElement = createTodoElement(todo);
+	todosElement.prepend(todoElement);
 };
-form.addEventListener("submit", e => {
-	e.preventDefault();
-	const text = input.value.trim();
+
+formElement.addEventListener("submit", event => {
+	event.preventDefault();
+
+	const text = inputElement.value.trim();
 	if (!text) return;
+
 	handleCreateTodo(todos, text);
-	input.value = "";
+	inputElement.value = "";
+});
+
+todosElement.addEventListener("click", ({ target }) => {
+	const todo = target.closest(".todo");
+	if (!todo) return;
+
+	const todoId = Number(todo.dataset.id);
+
+	if (target.matches(".button-complete")) {
+		completeTodoById(todos, todoId);
+		todo.classList.toggle("completed");
+	}
+
+	if (target.matches(".button-delete")) {
+		deleteTodoById(todos, todoId);
+		todo.remove();
+	}
 });
